@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>矿战史料馆 · Mine Wars Archive 1912—1922</title>
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<!-- ============ 顶部导航 ============ -->
+<nav class="topbar" id="topbar">
+  <a class="brand" href="#hero"><span class="brand-mark"></span><span class="zh">矿战史料馆</span><span class="en">MINE WARS ARCHIVE</span></a>
+  <div class="navlinks">
+    <a href="#map-sec"><b>01</b><span class="zh">地图 · 时间</span><span class="en">MAP · TIME</span></a>
+    <a href="#chron-sec"><b>02</b><span class="zh">逐日年表</span><span class="en">CHRONICLE</span></a>
+    <a href="#arch-sec"><b>03</b><span class="zh">史料检索</span><span class="en">ARCHIVE</span></a>
+    <a href="#bib-sec"><b>04</b><span class="zh">研究书目</span><span class="en">SCHOLARSHIP</span></a>
+    <a href="#notes-sec"><b>05</b><span class="zh">说明</span><span class="en">NOTES</span></a>
+  </div>
+  <button class="lang" id="langBtn" title="中文 / English"><span class="l-zh">中</span><i></i><span class="l-en">EN</span></button>
+</nav>
+
+<!-- ============ 海报式首屏 ============ -->
+<header class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="wedge"></div>
+    <div class="disc"></div>
+    <div class="ring"></div>
+    <div class="beam b1"></div><div class="beam b2"></div><div class="beam b3"></div>
+    <div class="halftone"></div>
+    <figure class="montage m1"><img src="assets/photos/Blair-after-the-battle-2.jpg" alt=""></figure>
+    <figure class="montage m2"><img src="assets/photos/Miners_with_guns_in_Eskdale.jpg" alt=""></figure>
+    <figure class="montage m3"><img src="assets/photos/Blair-machine-gun-nest_0.jpg" alt=""></figure>
+  </div>
+  <div class="hero-type">
+    <div class="kicker"><span class="zh">西弗吉尼亚 · 南部煤田</span><span class="en">SOUTHERN WEST VIRGINIA COALFIELDS</span></div>
+    <h1 class="title-zh">煤田间的<br><em>公民权</em>斗争</h1>
+    <h1 class="title-en"><span>THE</span><br><span>MINE</span><br><em>WARS</em></h1>
+    <div class="years"><span>1912</span><i></i><span>1922</span></div>
+    <p class="lede zh">公司镇、矿卫、戒严与联邦军队。从潘特溪到布莱尔山，按日排开的史料。</p>
+    <p class="lede en">Company towns, mine guards, martial law and the United States Army. From Paint Creek to Blair Mountain: the record, day by day.</p>
+  </div>
+  <div class="hero-stats" id="heroStats"></div>
+  <a class="hero-cta" href="#map-sec"><span class="zh">进入地图</span><span class="en">ENTER THE MAP</span><svg viewBox="0 0 60 24"><path d="M0 12h50M40 3l12 9-12 9" fill="none" stroke="currentColor" stroke-width="4"/></svg></a>
+  <div class="hero-side"><span>WE ARE CITIZENS OF THIS GREAT REPUBLIC</span></div>
+</header>
+
+<!-- ============ 01 地图与时间 ============ -->
+<section class="sec sec-map" id="map-sec">
+  <div class="sec-head">
+    <div class="num">01</div>
+    <div class="ttl"><h2><span class="zh">地图与时间</span><span class="en">MAP &amp; TIME</span></h2>
+      <p class="zh">三级旧地图叠合：1921 年美国交通线图、1913 年西弗吉尼亚州图、1909—1924 年美国地质调查局地形图。拖动时间滑块，地图上的标记与热力随之变化。</p>
+      <p class="en">Three period maps in register: the United States (1921), West Virginia (1913) and USGS topographic sheets (1909–24). Drag the time slider; markers and heat follow.</p></div>
+    <div class="stripe"></div>
+  </div>
+
+  <div class="mapwrap">
+    <div class="mapframe">
+      <div id="map"></div>
+      <div class="map-levels">
+        <button data-lvl="1"><b>I</b><span class="zh">美国</span><span class="en">U.S.</span></button>
+        <button data-lvl="2"><b>II</b><span class="zh">西弗吉尼亚</span><span class="en">W. VA.</span></button>
+        <button data-lvl="3" class="on"><b>III</b><span class="zh">矿战地带</span><span class="en">WAR ZONE</span></button>
+        <div class="sub">
+          <button data-zone="kanawha"><span class="zh">潘特溪·卡宾溪</span><span class="en">Paint &amp; Cabin Creek</span></button>
+          <button data-zone="march"><span class="zh">行军路线</span><span class="en">Line of march</span></button>
+          <button data-zone="blair"><span class="zh">洛根·布莱尔山</span><span class="en">Logan · Blair Mtn.</span></button>
+          <button data-zone="mingo"><span class="zh">马特万·威廉森</span><span class="en">Matewan · Williamson</span></button>
+          <button data-zone="welch"><span class="zh">韦尔奇</span><span class="en">Welch</span></button>
+        </div>
+      </div>
+      <div class="map-layers">
+        <h4><span class="zh">图层</span><span class="en">LAYERS</span></h4>
+        <label><input type="checkbox" id="lyUS" checked><span class="sw"></span><em><span class="zh">美国全图 1921</span><span class="en">United States, 1921</span></em></label>
+        <label><input type="checkbox" id="lyWV" checked><span class="sw"></span><em><span class="zh">西弗吉尼亚州图 1913</span><span class="en">West Virginia, 1913</span></em></label>
+        <input type="range" id="opWV" min="0" max="100" value="100">
+        <label><input type="checkbox" id="lyTP" checked><span class="sw"></span><em><span class="zh">地形图 1909—1924</span><span class="en">USGS topo, 1909–24</span></em></label>
+        <input type="range" id="opTP" min="0" max="100" value="100">
+        <label><input type="checkbox" id="lyHeat" checked><span class="sw"></span><em><span class="zh">史料热力</span><span class="en">Source heat</span></em></label>
+        <label><input type="checkbox" id="lyRoute" checked><span class="sw"></span><em><span class="zh">1921 行军路线（示意）</span><span class="en">1921 march (schematic)</span></em></label>
+        <div class="heat-legend"><span class="zh">史料与图像数</span><span class="en">Sources &amp; images</span><div class="ramp"></div><div class="ticks"><i>1</i><i>10</i><i>30+</i></div></div>
+      </div>
+    </div>
+
+    <aside class="mapside">
+      <div class="side-head"><span class="zh">时段内的事件</span><span class="en">EVENTS IN RANGE</span><b id="sideCount">0</b></div>
+      <div class="side-list" id="sideList"></div>
+    </aside>
+  </div>
+
+  <div class="timebar">
+    <div class="tb-top">
+      <div class="tb-range"><span id="tbFrom">1912-01</span><i>→</i><span id="tbTo">1928-12</span></div>
+      <div class="tb-presets" id="tbPresets"></div>
+      <button class="play" id="playBtn"><svg viewBox="0 0 20 20"><path d="M4 2l14 8-14 8z"/></svg><span class="zh">逐事件播放</span><span class="en">PLAY EVENTS</span></button>
+    </div>
+    <div class="tb-hist"><canvas id="hist" height="110"></canvas><div class="tb-tip" id="histTip"></div></div>
+    <div class="tb-sliders">
+      <input type="range" id="rFrom" min="0" max="203" value="0">
+      <input type="range" id="rTo" min="0" max="203" value="203">
+    </div>
+    <div class="tb-axis" id="tbAxis"></div>
+  </div>
+</section>
+
+<!-- ============ 02 逐日年表 ============ -->
+<section class="sec sec-chron" id="chron-sec">
+  <div class="sec-head">
+    <div class="num">02</div>
+    <div class="ttl"><h2><span class="zh">逐日年表</span><span class="en">CHRONICLE</span></h2>
+      <p class="zh">每个事件注明日期精度与依据；带“待核”标记的日期是按通行叙述填入、尚未在史料包内找到直接依据的。史料截图上的红线标出关键词所在。</p>
+      <p class="en">Each entry states its date precision and basis. Dates flagged “unverified” follow the standard account and have not been confirmed in the collection. Red lines on the page images mark the matched words.</p></div>
+    <div class="stripe"></div>
+  </div>
+  <div class="chron-filter" id="chronFilter"></div>
+  <div class="chron" id="chron"></div>
+</section>
+
+<!-- ============ 03 史料检索 ============ -->
+<section class="sec sec-arch" id="arch-sec">
+  <div class="sec-head">
+    <div class="num">03</div>
+    <div class="ttl"><h2><span class="zh">史料检索</span><span class="en">ARCHIVE SEARCH</span></h2>
+      <p class="zh">馆藏全部条目，按史料类型、生成主体、时段和载体筛选。公有领域的文献可直接打开全文，其余链接到原始出处。</p>
+      <p class="en">Every item in the collection, filterable by type, producer, period and format. Public-domain items open in full; the rest link to their original source.</p></div>
+    <div class="stripe"></div>
+  </div>
+  <div class="zh-block" id="zhBlock"><h3><span class="zh">已译成中文的史料</span><span class="en">SOURCES IN CHINESE TRANSLATION</span></h3><div class="zh-list" id="zhList"></div></div>
+  <div class="arch-controls">
+    <div class="searchbox"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 15l7 7" stroke="currentColor" stroke-width="3"/></svg><input id="q" type="search" placeholder="检索题名、人名、路径…  Search titles, names, paths…"></div>
+    <div class="filters">
+      <select id="fKind"></select><select id="fType"></select><select id="fActor"></select><select id="fPeriod"></select><select id="fExt"></select><select id="fSort"></select>
+      <button id="fReset"><span class="zh">重置</span><span class="en">RESET</span></button>
+    </div>
+    <div class="arch-meta"><b id="archCount">0</b><span class="zh">条结果</span><span class="en">results</span></div>
+  </div>
+  <div class="arch-list" id="archList"></div>
+  <div class="pager" id="pager"></div>
+</section>
+
+<!-- ============ 04 研究书目 ============ -->
+<section class="sec sec-bib" id="bib-sec">
+  <div class="sec-head">
+    <div class="num">04</div>
+    <div class="ttl"><h2><span class="zh">研究书目</span><span class="en">SCHOLARSHIP</span></h2>
+      <p class="zh">这一领域的专著、论文、学位论文和书评，按主题分组。标“馆内”的本馆存有全文；标“题录待核”的是凭通行书目登记的，引用前须查实。</p>
+      <p class="en">Monographs, articles, theses and reviews in the field, grouped by theme. “Held” means the collection has the full text; “unverified” entries were entered from standard bibliographies and must be checked before citing.</p></div>
+    <div class="stripe"></div>
+  </div>
+  <div class="bib-controls">
+    <div class="searchbox"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="3"/><path d="M15 15l7 7" stroke="currentColor" stroke-width="3"/></svg><input id="bq" type="search" placeholder="检索作者、题名、刊名…  Search author, title, journal…"></div>
+    <div class="filters"><select id="bTopic"></select><select id="bType"></select><select id="bHave"></select><select id="bSort"></select></div>
+    <div class="arch-meta"><b id="bibCount">0</b><span class="zh">条</span><span class="en">entries</span></div>
+  </div>
+  <div class="bib-list" id="bibList"></div>
+</section>
+
+<!-- ============ 05 说明 ============ -->
+<section class="sec sec-notes" id="notes-sec">
+  <div class="sec-head">
+    <div class="num">05</div>
+    <div class="ttl"><h2><span class="zh">说明与限度</span><span class="en">NOTES &amp; LIMITS</span></h2></div>
+    <div class="stripe"></div>
+  </div>
+  <div class="notes">
+    <article>
+      <h3><span class="zh">地图</span><span class="en">Maps</span></h3>
+      <p class="zh">一级：<i>Map of Principal Transportation Lines of the United States</i>，Rand McNally 为基督教青年会学校印制，1921 年，美国国会图书馆藏。二级：<i>The Rand-McNally New Commercial Atlas Map of West Virginia</i>，1913 年。三级：美国地质调查局 1:62,500 地形图 15 幅，测印于 1909—1924 年（查尔斯顿、圣奥尔本斯、麦迪逊、佩托纳、蒙哥马利、诺格塔克、霍尔登、洛根、鲍尔德诺布、威廉森、马特万、吉尔伯特、派恩维尔、伊格、韦尔奇）。</p>
+      <p class="zh">地形图按其自带的投影参数换算后拼接，定位可靠。州图和全国图靠人工读取城镇位置配准：州图用薄板样条，核对过的城镇偏差在一两公里内；全国图误差约十公里。原图只做几何纠正与重采样，图面未作修饰；各图幅纸色不同是原貌。</p>
+      <p class="en">Level I: <i>Map of Principal Transportation Lines of the United States</i>, Rand McNally for the United Y.M.C.A. Schools, 1921 (Library of Congress). Level II: <i>The Rand-McNally New Commercial Atlas Map of West Virginia</i>, 1913. Level III: fifteen USGS 1:62,500 quadrangles surveyed and printed 1909–24.</p>
+      <p class="en">The topographic sheets are placed from their own projection parameters and are reliable. The state and national maps were registered by reading town positions by eye: checked towns on the state map fall within one or two kilometres; the national map is good to about ten. The maps are rectified and resampled only; nothing on their faces has been retouched, and the differing paper tones are original.</p>
+    </article>
+    <article>
+      <h3><span class="zh">年表与史料匹配</span><span class="en">Chronicle and matching</span></h3>
+      <p class="zh">事件日期主要依据 Laurie 1991 年论文、e-WV 百科词条和西弗吉尼亚州档案馆的概述，另有少数取自判词、国会记录和文献题名页。各家说法不一之处（人数、伤亡、战斗起止日）在条目里注明。地点坐标是城镇中心的近似值。</p>
+      <p class="zh">事件与史料页的对应是按关键词机械匹配的：同一页上出现了全部关键词，就截图并在词下画红线。这只说明该页提到了这些词，不表示内容已经核读，更不表示它支持某个论断。转录文本不是原件，引用须对照原刊。</p>
+      <p class="en">Dates rest chiefly on Laurie (1991), the e-WV encyclopedia and the West Virginia State Archives' overview, with a few taken from court opinions, the Congressional Record and title pages. Where accounts disagree (numbers, casualties, the span of a battle) the entry says so. Coordinates are approximate town centres.</p>
+      <p class="en">Events are tied to source pages by mechanical keyword matching: a page that contains every word of a keyword set is captured and the words underlined in red. That shows only that the page mentions them; the content has not been read for you, and no claim is implied. Transcriptions are not originals and must be checked against the printed source.</p>
+    </article>
+    <article>
+      <h3><span class="zh">图像</span><span class="en">Images</span></h3>
+      <p class="zh">历史照片取自维基共享资源标注为公有领域的文件，每张的日期、作者和来源页见事件详情。许可信息以来源页为准。</p>
+      <p class="en">Photographs come from files marked public domain on Wikimedia Commons; date, creator and source page are given in each event. Licensing follows the source page.</p>
+    </article>
+  </div>
+  <footer class="foot"><div class="foot-bar"></div><p><span class="zh">学年论文《煤田间的“公民权”斗争》史料工作台 · 仅供本机研究使用</span><span class="en">Research workbench for a term paper · for local study only</span></p></footer>
+</section>
+
+<!-- ============ 事件详情抽屉 ============ -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-shade" id="drawerShade"></div>
+  <div class="drawer-body">
+    <button class="drawer-x" id="drawerX">×</button>
+    <div id="drawerContent"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox"><img alt=""><div class="lb-cap"></div></div>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="data/tiles.js"></script>
+<script src="data/events.js"></script>
+<script src="data/catalog.js"></script>
+<script src="data/biblio.js"></script>
+<script src="data/zh.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

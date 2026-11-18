@@ -1,0 +1,3 @@
+library/
+*.zip
+__pycache__/
