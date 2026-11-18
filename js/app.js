@@ -15,7 +15,7 @@
   /* 全文链接：站内全文 / 原始出处 / 版权期内不提供（附馆藏检索） */
   function openLink(a, title) {
     if (!a) return "";
-    if (a.a === "site") return '<a href="' + esc(a.u) + '" target="_blank" rel="noopener" title="' + esc(T(a.wz, a.we)) + '">' + T("打开全文", "OPEN FULL TEXT") + "</a>";
+    if (a.a === "site") return '<a href="' + esc(a.u) + '" target="_blank" rel="noopener" title="' + esc(T(a.wz, a.we)) + '">' + (a.u.indexOf("/releases/download/") >= 0 ? T("下载全文 PDF", "DOWNLOAD PDF") : T("打开全文", "OPEN FULL TEXT")) + "</a>";
     if (a.a === "ext") return '<a class="ext" href="' + esc(a.u) + '" target="_blank" rel="noopener" title="' + esc(T(a.wz, a.we)) + '">' + T("原始出处 ↗", "SOURCE ↗") + "</a>";
     if (a.we.indexOf("In copyright") !== 0) return '<span class="nof" title="' + esc(T(a.wz, a.we)) + '">' + T("本站未收", "NOT HOSTED") + "</span>";
     return '<a class="nof" href="https://search.worldcat.org/search?q=' + encodeURIComponent((title || "").replace(/[《》“”（）()]/g, " ")) + '" target="_blank" rel="noopener" title="' + esc(T(a.wz, a.we)) + '">' + T("版权期内 · 查馆藏 ↗", "IN COPYRIGHT · FIND A COPY ↗") + "</a>";
@@ -422,7 +422,7 @@
       var links = "";
       if (b.doi) links += '<a href="https://doi.org/' + esc(b.doi) + '" target="_blank" rel="noopener">DOI ↗</a>';
       else if (b.oa) links += '<a href="' + esc(b.oa) + '" target="_blank" rel="noopener">' + T("开放全文 ↗", "OPEN ACCESS ↗") + "</a>";
-      if (b.acc && b.acc.a === "site") links += '<a href="' + esc(b.acc.u) + '" target="_blank" rel="noopener">' + T("打开全文", "FULL TEXT") + "</a>";
+      if (b.acc && b.acc.a === "site") links += openLink(b.acc, b.ti);
       h += '<div class="bitem"><div class="by">' + (b.y || "—") + '</div><div><p class="cite">' + cite + '</p><div class="tags"><span class="ty">' + esc(T(b.tz, b.ty.replace(/-/g, " "))) + "</span>" + (b.have ? '<span class="hv">' + T("馆内", "HELD") + "</span>" : "") + (b.v ? "" : '<span class="uv">' + T("题录待核", "UNVERIFIED") + "</span>") + links + "</div></div></div>";
     });
     $("#bibList").innerHTML = h || '<p style="font-family:var(--ui);padding:20px 0">' + T("没有符合条件的条目。", "Nothing matches.") + "</p>";

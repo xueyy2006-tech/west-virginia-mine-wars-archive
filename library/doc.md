@@ -1,0 +1,50 @@
+﻿# 西弗吉尼亚州档案馆（West Virginia Archives and History）手稿馆藏线索
+
+来源：<https://archive.wvculture.org/history/collections/manuscripts.html> 手稿目录，按关键词筛出 46 条，照录馆方目录原文。多数未数字化，须联系馆方复制。已数字化的 Ms97-24（布利扎德审判记录）已在文献包内。带 * 号的是馆方标注有检索工具的大宗收藏。
+
+- Ms2002-108 Account book, New River area, possibly coal company store, ca. 1907. 1 volume.
+- Ms2024-048 Account book, Stevens Coal Company. Time book of employees at Acme and Keystone mines, Kanawha County, including accounts at company store, March 1897-November 1899. 1 volume.
+- Ms2013-073 Account books, Campbells Creek Coal Company store, 1880-1881, 1882-1883, 1940-1941. 3 volumes.
+- Ms88-96 Account books. Stevens Coal, Cabin Creek Consolidated Coal, freight books for Steamer Liberty, 1871-1911. 12 volumes.
+- Ms2011-078 B&O Railroad receipts, invitation to Governor Ephraim Morgan's inaugural, 1867- 1921. 17 items.
+- Ms80-166 *Blizzard, William Collection. Correspondence, papers of early United Mine Workers organizers and District 17 president, ca. 1910-1963. 16 boxes.
+- Ms84-185 Chesapeake & Potomac Telephone Company. Corres. about mine wars, 1921-1922. n.d.
+- Ms98-6 Coal forms. Account of Steve Nash with Hitchman Coal and Coke, UMW transfer card (photocopies), 1906-1912. 2 items.
+- Ms2003-257 Coal history. Letters discussing Mine Wars period, objections to UMWA organizing at Semet-Solvay mines, 1924, 1986. 1 folder.
+- Ms86-121 Coal Miners Research Association. Minutes, conferences, 1978-1981. 1 folder.
+- Ms2009-065 Cornwell, John J. Correspondence with W.J. Heatherman, 1918-1920. 2 items.
+- Ms2010-030 Cornwell, John J. Speech at ForeFathers Day Dinner in New York City, 1932 December 22; undated clipping about possible "White House for Cornwell" movement. 2 items.
+- Ms2003-188 Diary. Accounts of Mabel E. Baldwin Love, Grafton, 1909-1913. 1 volume.
+- Ms79-158 Eastern Regional Coal Archives. Annual report, copies of scope and content notes, Bramwell Aristocrat, listing of Tom Felts papers, 1981-1988. 4 folders.
+- Ms2009-077 Hall, Fred. Letters regarding his role in Mine Wars, postcard from AEF (photocopies), 1918-1922. 5 items.
+- Ms2009-019 Hatfield, Henry. Letter from his daughter Hazel to Gov. Moore describing his work as coalfield doctor before becoming governor, 1988. 2 items.
+- Ms2020-100 Hill family. Ledger book of Bruno Caleb Hill; paper on families of Island Creek area, Lincoln County, by Ruford Burton Hill, 1901-1914, 1980. 2 items.
+- Ms2008-001 Hudnall, Jesse Collection. Personnel card, UMWA Local 404 bylaws, Mammoth Accident & Co-Operative Association bylaws, Warner Collieries safety rules. 1922-1930. 4 items. Ms2008-001acc Hudnall, Rebecca Collection. Charleston area materials including Kennedy campaign, Catholic churches, Womens' clubs, politics and other assorted materials, 1942-1998. 1 box.
+- Ms2009-070 Journal. Ledger entries probably by John D. Keeney and John Angus McIntosh, poetry and lock of hair by Salinda Jane McIntosh Harpold, later owned by Emma Harpold Smith, 1851-1854, n.d. 1 volume.
+- Ms79-60 Kanawha Coal Operators Association. Records, 1905-1984. 46 boxes. (processing not finished)
+- Ms2017-038 Keeney, Roscoe Collection. Materials on Keeney, Morris, Paxton and related families, n.d. 3 boxes.
+- Ms2009-044 Laska, P.J. "The UMWA in the New River Field," rough draft, 1978, photocopy. 1 item.
+- Ms85-40 Laurie, Clayton D. Report of an incident during the "mine war" in Logan County, ca. 1920, literary mss, n.d. 1 item.
+- Ms2009-072 Literary manuscript. "The Boys'll Listen to Me" The Labor Career of William Blizzard by Shae Ronald Davidson, master's thesis, Marshall, 1998. 1 volume.
+- Ms2015-041 Literary manuscript. "'If the Men Don't Fight, the Women Will': Women and Gender Roles in the West Virginia Mine Wars" by Connor Kenaston, 2014. 1 volume.
+- Ms2003-091 Literary manuscript. "United Mine Workers of America, Attitude Toward Law." by George C. McIntosh, literary manuscript, circa 1920. Includes a copy of the manuscript and the United Mine Workers Journal issue dated August 15, 1920. 1 folder, 2 items.
+- Ms2021-298 Logan Coal Operators Association. Files and publications, including files of Melvin Triolo, 1905-1989. 118 boxes.
+- Ms90-82 Logan County coal mine survey notes kept by N. L. Sefton, ca. 1916-17. 21 volumes.
+- Ms2023-032 McLean, Lois Collection. Manuscript drafts, correspondence and other materials relating to Mary Harris Mother Jones, 1859-1994. 11 boxes.
+- Ms79-69 "Matewan" screenplay by John Sayles (photocopy), literary mss, 1983. 1 item.
+- Ms2009-005 Mine war - see Laurie, Clayton D.
+- Ms80-206 "Mother Angel" script for play about Mother Jones by G. Musinsky, literary mss, n.d. 1 item.
+- Ms2009-113 Mother Jones. Script for television movie The Legend of Mother Jones by Theodore Eiland, n.d. 1 item.
+- Ms91-9 Musinsky, G. "Mother Angel" script for play about Mother Jones, literary mss, n.d. 1 item.
+- Ms2016-011 Report of an incident during the "mine war" in Logan County by Clayton D. Laurie, n.d. 1 item.
+- Ms80-175 Sayles, John. Screenplay of Matewan (photocopy),1983. 1 item.
+- Ms2011-016 Socialist Party - see Wheeling Socialist Party
+- Ms79-66 Tarkany, Mike Collection. Documents and snapshots of Hungarian immigrant who died while in West Virginia National Guard, 1906-1914. 1 folder.
+- Ms79-89 Templeton, Lt. Charles F. Commission, holiday menu for WWI soldier, originally in WV National Guard and later 3rd Batt, 26th Inf., ca. 1917-19. 2 items.
+- Ms79-192 Thomas, Jean Collection. Genealogy and research materials, much of it Blizzard family and mine wars, 1720s-2003. 6 boxes.
+- Ms80-173 Triolo, Melvin - see Logan Coal Operators
+- Ms2016-013 Turner, Floyd Clinton Collection. Corres. on Cabin Creek Flood, 1916.
+- Ms86-184 "The UMWA in the New River Field" by P.J. Laska, rough draft, 1978, photocopy. 1 item.
+- Ms79-19 United Mine Workers of America. Election Committee Manual, Election Committee Student Manual, 1980s. 2 volumes.
+- Ms87-200 Wheeling Socialist Party. Account books, membership books and other documents, 1904-1918. 1 box.
+- Ms2021-202 Willis Branch mss. Photocopies of history of Willis Branch mine during Paint Creek strike, 1921, 1973. 2 items.
